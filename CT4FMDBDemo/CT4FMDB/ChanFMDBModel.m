@@ -218,8 +218,8 @@
 
 - (BOOL)saveOrUpdate
 {
-    id primaryValue = [self valueForKey:[[self class] primaryKey]];
-    NSString *condition = [NSString stringWithFormat:@"WHERE %@ = %@",[[self class] primaryKey],primaryValue];
+    id primaryValue = [self valueForKey:[[self class] getCurClsPrimaryKey]];
+    NSString *condition = [NSString stringWithFormat:@"WHERE %@ = %@",[[self class] getCurClsPrimaryKey],primaryValue];
     if ([[self class] findFirstByCriteria:condition]) {
         return [self update];
     }
@@ -311,7 +311,7 @@
     __block BOOL res = NO;
     [chanDB.dbQueue inDatabase:^(FMDatabase *db) {
         NSString *tableName = NSStringFromClass(self.class);
-        id primaryValue = [self valueForKey:[[self class] primaryKey]];
+        id primaryValue = [self valueForKey:[[self class] getCurClsPrimaryKey]];
         if (!primaryValue) {
             NSLog(@"主键能为空");
             return ;
@@ -320,7 +320,7 @@
         NSMutableArray *updateValues = [NSMutableArray  array];
         for (int i = 0; i < self.columeNames.count; i++) {
             NSString *proname = [self.columeNames objectAtIndex:i];
-            if ([proname isEqualToString:[[self class] primaryKey]]) {
+            if ([proname isEqualToString:[[self class] getCurClsPrimaryKey]]) {
                 continue;
             }
             [keyString appendFormat:@" %@=?,", proname];
@@ -333,7 +333,7 @@
         
         //删除最后那个逗号
         [keyString deleteCharactersInRange:NSMakeRange(keyString.length - 1, 1)];
-        NSString *sql = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@ = ?;", tableName, keyString, [[self class] primaryKey]];
+        NSString *sql = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@ = ?;", tableName, keyString, [[self class] getCurClsPrimaryKey]];
         [updateValues addObject:primaryValue];
         res = [db executeUpdate:sql withArgumentsInArray:updateValues];
         NSLog(res?@"更新成功":@"更新失败");
@@ -355,7 +355,7 @@
     [chanDB.dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         for (ChanFMDBModel *model in array) {
             NSString *tableName = NSStringFromClass(model.class);
-            id primaryValue = [self valueForKey:[[self class] primaryKey]];
+            id primaryValue = [self valueForKey:[[self class] getCurClsPrimaryKey]];
             if (!primaryValue || primaryValue <= 0) {
                 res = NO;
                 *rollback = YES;
@@ -366,7 +366,7 @@
             NSMutableArray *updateValues = [NSMutableArray  array];
             for (int i = 0; i < model.columeNames.count; i++) {
                 NSString *proname = [model.columeNames objectAtIndex:i];
-                if ([proname isEqualToString:[[self class] primaryKey]]) {
+                if ([proname isEqualToString:[[self class] getCurClsPrimaryKey]]) {
                     continue;
                 }
                 [keyString appendFormat:@" %@=?,", proname];
@@ -379,7 +379,7 @@
             
             //删除最后那个逗号
             [keyString deleteCharactersInRange:NSMakeRange(keyString.length - 1, 1)];
-            NSString *sql = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@=?;", tableName, keyString, [[self class] primaryKey]];
+            NSString *sql = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@=?;", tableName, keyString, [[self class] getCurClsPrimaryKey]];
             [updateValues addObject:primaryValue];
             BOOL flag = [db executeUpdate:sql withArgumentsInArray:updateValues];
             NSLog(flag?@"更新成功":@"更新失败");
@@ -401,11 +401,11 @@
     __block BOOL res = NO;
     [chanDB.dbQueue inDatabase:^(FMDatabase *db) {
         NSString *tableName = NSStringFromClass(self.class);
-        id primaryValue = [self valueForKey:[[self class] primaryKey]];
+        id primaryValue = [self valueForKey:[[self class] getCurClsPrimaryKey]];
         if (!primaryValue ) {
             return ;
         }
-        NSString *sql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = ?",tableName,[[self class] primaryKey]];
+        NSString *sql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = ?",tableName,[[self class] getCurClsPrimaryKey]];
         res = [db executeUpdate:sql withArgumentsInArray:@[primaryValue]];
         NSLog(res?@"删除成功":@"删除失败");
     }];
@@ -427,12 +427,12 @@
     [chanDB.dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         for (ChanFMDBModel *model in array) {
             NSString *tableName = NSStringFromClass(model.class);
-            id primaryValue = [model valueForKey:[[self class] primaryKey]];
+            id primaryValue = [model valueForKey:[[self class] getCurClsPrimaryKey]];
             if (!primaryValue || primaryValue <= 0) {
                 return ;
             }
             
-            NSString *sql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = ?",tableName,[[self class] primaryKey]];
+            NSString *sql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = ?",tableName,[[self class] getCurClsPrimaryKey]];
             BOOL flag = [db executeUpdate:sql withArgumentsInArray:@[primaryValue]];
             NSLog(flag?@"删除成功":@"删除失败");
             if (!flag) {
@@ -580,12 +580,16 @@
     
     return users;
 }
+//分页查询
++(NSArray *)findByCriteria:(NSString *)criteria Page:(NSInteger)page PageSize:(NSInteger)pagesize{
+    return [ChanFMDBModel findByCriteria:[NSString stringWithFormat:@"%@ limit %d,%d",criteria,(int)((page-1)*pagesize),(int)pagesize]];
+}
 +(NSInteger)getCountByCriteria:(NSString *)criteria{
     ChanFMDBHelper *chanDB = [ChanFMDBHelper shareInstance];
-   __block NSInteger resultCount  =0;
+    __block NSInteger resultCount  =0;
     [chanDB.dbQueue inDatabase:^(FMDatabase *db) {
         NSString *tableName = NSStringFromClass(self.class);
-         resultCount = [db intForQuery:@"select count(*) from%@ %@",tableName,criteria];
+        resultCount = [db intForQuery:@"select count(*) from%@ %@",tableName,criteria];
     }];
     return resultCount;
 }
@@ -629,7 +633,11 @@
 {
     return [NSArray array];
 }
-
++(NSString *)getCurClsPrimaryKey{
+    NSString *primaryKey = [[self class] primaryKey];
+    NSAssert(primaryKey.length>0, @"必须在模型类的.m中 重写primaryKey类方法,声明主键!Rewriting primaryKey class method!And void the primaryKey");
+    return primaryKey;
+}
 +(NSString *)primaryKey{
     return nil;
 }
