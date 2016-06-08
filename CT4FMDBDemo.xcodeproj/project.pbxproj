@@ -7,24 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		349F8E5DA67C0106044BD76A /* libPods-CT4FMDBDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E092375E54076A99C48D289 /* libPods-CT4FMDBDemo.a */; };
 		6401D25F1D07CCEC007D105A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D25E1D07CCEC007D105A /* main.m */; };
 		6401D2621D07CCEC007D105A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D2611D07CCEC007D105A /* AppDelegate.m */; };
 		6401D2651D07CCEC007D105A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D2641D07CCEC007D105A /* ViewController.m */; };
 		6401D2681D07CCEC007D105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6401D2661D07CCEC007D105A /* Main.storyboard */; };
 		6401D26A1D07CCEC007D105A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6401D2691D07CCEC007D105A /* Assets.xcassets */; };
 		6401D26D1D07CCEC007D105A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6401D26B1D07CCEC007D105A /* LaunchScreen.storyboard */; };
-		6401D27C1D07CD18007D105A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6401D27B1D07CD18007D105A /* libsqlite3.tbd */; };
 		6401D2801D07CDA7007D105A /* ChanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D27F1D07CDA7007D105A /* ChanModel.m */; };
-		6401D28D1D07D09B007D105A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D2831D07D09B007D105A /* FMDatabase.m */; };
-		6401D28E1D07D09C007D105A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D2851D07D09B007D105A /* FMDatabaseAdditions.m */; };
-		6401D28F1D07D09C007D105A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D2871D07D09B007D105A /* FMDatabasePool.m */; };
-		6401D2901D07D09C007D105A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D2891D07D09B007D105A /* FMDatabaseQueue.m */; };
-		6401D2911D07D09C007D105A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D28C1D07D09B007D105A /* FMResultSet.m */; };
-		64305AF91D07F9CF00DC6453 /* ChanFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64305AF61D07F9CF00DC6453 /* ChanFMDBHelper.m */; };
-		64305AFA1D07F9CF00DC6453 /* ChanFMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64305AF81D07F9CF00DC6453 /* ChanFMDBModel.m */; };
+		64535E721D0814210085580F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64535E711D0814210085580F /* libsqlite3.tbd */; };
+		64535E781D081C780085580F /* ChanFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64535E751D081C780085580F /* ChanFMDBHelper.m */; };
+		64535E791D081C780085580F /* ChanFMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64535E771D081C780085580F /* ChanFMDBModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6361F2C9F2EB18F96EC3C329 /* Pods-CT4FMDBDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT4FMDBDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CT4FMDBDemo/Pods-CT4FMDBDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6401D25A1D07CCEC007D105A /* CT4FMDBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CT4FMDBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6401D25E1D07CCEC007D105A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6401D2601D07CCEC007D105A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,24 +32,15 @@
 		6401D2691D07CCEC007D105A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6401D26C1D07CCEC007D105A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6401D26E1D07CCEC007D105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6401D27B1D07CD18007D105A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6401D27E1D07CDA7007D105A /* ChanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanModel.h; sourceTree = "<group>"; };
 		6401D27F1D07CDA7007D105A /* ChanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanModel.m; sourceTree = "<group>"; };
-		6401D2821D07D09B007D105A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		6401D2831D07D09B007D105A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		6401D2841D07D09B007D105A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		6401D2851D07D09B007D105A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		6401D2861D07D09B007D105A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		6401D2871D07D09B007D105A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		6401D2881D07D09B007D105A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		6401D2891D07D09B007D105A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		6401D28A1D07D09B007D105A /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		6401D28B1D07D09B007D105A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		6401D28C1D07D09B007D105A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		64305AF51D07F9CF00DC6453 /* ChanFMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBHelper.h; sourceTree = "<group>"; };
-		64305AF61D07F9CF00DC6453 /* ChanFMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBHelper.m; sourceTree = "<group>"; };
-		64305AF71D07F9CF00DC6453 /* ChanFMDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBModel.h; sourceTree = "<group>"; };
-		64305AF81D07F9CF00DC6453 /* ChanFMDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBModel.m; sourceTree = "<group>"; };
+		64535E711D0814210085580F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		64535E741D081C780085580F /* ChanFMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBHelper.h; sourceTree = "<group>"; };
+		64535E751D081C780085580F /* ChanFMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBHelper.m; sourceTree = "<group>"; };
+		64535E761D081C780085580F /* ChanFMDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBModel.h; sourceTree = "<group>"; };
+		64535E771D081C780085580F /* ChanFMDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBModel.m; sourceTree = "<group>"; };
+		7E092375E54076A99C48D289 /* libPods-CT4FMDBDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CT4FMDBDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92932B0FE22E98FA7D60169 /* Pods-CT4FMDBDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT4FMDBDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CT4FMDBDemo/Pods-CT4FMDBDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,19 +48,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6401D27C1D07CD18007D105A /* libsqlite3.tbd in Frameworks */,
+				64535E721D0814210085580F /* libsqlite3.tbd in Frameworks */,
+				349F8E5DA67C0106044BD76A /* libPods-CT4FMDBDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15BCC65EECED3CFFAB04D77F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D92932B0FE22E98FA7D60169 /* Pods-CT4FMDBDemo.debug.xcconfig */,
+				6361F2C9F2EB18F96EC3C329 /* Pods-CT4FMDBDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6401D2511D07CCEC007D105A = {
 			isa = PBXGroup;
 			children = (
-				6401D27B1D07CD18007D105A /* libsqlite3.tbd */,
 				6401D25C1D07CCEC007D105A /* CT4FMDBDemo */,
 				6401D25B1D07CCEC007D105A /* Products */,
+				15BCC65EECED3CFFAB04D77F /* Pods */,
+				DDF5FAB241134EA7CFD7AAA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,12 +86,11 @@
 		6401D25C1D07CCEC007D105A /* CT4FMDBDemo */ = {
 			isa = PBXGroup;
 			children = (
-				6401D2811D07D09B007D105A /* fmdb */,
-				64305AF41D07F9CF00DC6453 /* CT4FMDB */,
 				6401D2601D07CCEC007D105A /* AppDelegate.h */,
 				6401D2611D07CCEC007D105A /* AppDelegate.m */,
 				6401D2631D07CCEC007D105A /* ViewController.h */,
 				6401D2641D07CCEC007D105A /* ViewController.m */,
+				64535E731D081C780085580F /* CT4FMDB */,
 				6401D27D1D07CD26007D105A /* Model */,
 				6401D2661D07CCEC007D105A /* Main.storyboard */,
 				6401D2691D07CCEC007D105A /* Assets.xcassets */,
@@ -120,33 +118,24 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		6401D2811D07D09B007D105A /* fmdb */ = {
+		64535E731D081C780085580F /* CT4FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				6401D2821D07D09B007D105A /* FMDatabase.h */,
-				6401D2831D07D09B007D105A /* FMDatabase.m */,
-				6401D2841D07D09B007D105A /* FMDatabaseAdditions.h */,
-				6401D2851D07D09B007D105A /* FMDatabaseAdditions.m */,
-				6401D2861D07D09B007D105A /* FMDatabasePool.h */,
-				6401D2871D07D09B007D105A /* FMDatabasePool.m */,
-				6401D2881D07D09B007D105A /* FMDatabaseQueue.h */,
-				6401D2891D07D09B007D105A /* FMDatabaseQueue.m */,
-				6401D28A1D07D09B007D105A /* FMDB.h */,
-				6401D28B1D07D09B007D105A /* FMResultSet.h */,
-				6401D28C1D07D09B007D105A /* FMResultSet.m */,
-			);
-			path = fmdb;
-			sourceTree = "<group>";
-		};
-		64305AF41D07F9CF00DC6453 /* CT4FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				64305AF51D07F9CF00DC6453 /* ChanFMDBHelper.h */,
-				64305AF61D07F9CF00DC6453 /* ChanFMDBHelper.m */,
-				64305AF71D07F9CF00DC6453 /* ChanFMDBModel.h */,
-				64305AF81D07F9CF00DC6453 /* ChanFMDBModel.m */,
+				64535E741D081C780085580F /* ChanFMDBHelper.h */,
+				64535E751D081C780085580F /* ChanFMDBHelper.m */,
+				64535E761D081C780085580F /* ChanFMDBModel.h */,
+				64535E771D081C780085580F /* ChanFMDBModel.m */,
 			);
 			path = CT4FMDB;
+			sourceTree = SOURCE_ROOT;
+		};
+		DDF5FAB241134EA7CFD7AAA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64535E711D0814210085580F /* libsqlite3.tbd */,
+				7E092375E54076A99C48D289 /* libPods-CT4FMDBDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6401D2711D07CCEC007D105A /* Build configuration list for PBXNativeTarget "CT4FMDBDemo" */;
 			buildPhases = (
+				3143C13FD3F4159E82974332 /* 📦 Check Pods Manifest.lock */,
 				6401D2561D07CCEC007D105A /* Sources */,
 				6401D2571D07CCEC007D105A /* Frameworks */,
 				6401D2581D07CCEC007D105A /* Resources */,
+				FD6056BE2E2221420520386D /* 📦 Embed Pods Frameworks */,
+				5E323BBBC4445F6D0025FB25 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,22 +206,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3143C13FD3F4159E82974332 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E323BBBC4445F6D0025FB25 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CT4FMDBDemo/Pods-CT4FMDBDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6056BE2E2221420520386D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CT4FMDBDemo/Pods-CT4FMDBDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6401D2561D07CCEC007D105A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6401D2651D07CCEC007D105A /* ViewController.m in Sources */,
+				64535E781D081C780085580F /* ChanFMDBHelper.m in Sources */,
 				6401D2801D07CDA7007D105A /* ChanModel.m in Sources */,
 				6401D2621D07CCEC007D105A /* AppDelegate.m in Sources */,
-				6401D28D1D07D09B007D105A /* FMDatabase.m in Sources */,
-				6401D28F1D07D09C007D105A /* FMDatabasePool.m in Sources */,
-				6401D2901D07D09C007D105A /* FMDatabaseQueue.m in Sources */,
-				64305AF91D07F9CF00DC6453 /* ChanFMDBHelper.m in Sources */,
-				64305AFA1D07F9CF00DC6453 /* ChanFMDBModel.m in Sources */,
-				6401D2911D07D09C007D105A /* FMResultSet.m in Sources */,
+				64535E791D081C780085580F /* ChanFMDBModel.m in Sources */,
 				6401D25F1D07CCEC007D105A /* main.m in Sources */,
-				6401D28E1D07D09C007D105A /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +374,14 @@
 		};
 		6401D2721D07CCEC007D105A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D92932B0FE22E98FA7D60169 /* Pods-CT4FMDBDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CT4FMDBDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CT4FMDBDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -350,10 +389,14 @@
 		};
 		6401D2731D07CCEC007D105A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6361F2C9F2EB18F96EC3C329 /* Pods-CT4FMDBDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CT4FMDBDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CT4FMDBDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
