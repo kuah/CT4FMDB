@@ -21,7 +21,7 @@ s.source_files = "CT4FMDB", "CT4FMDB/**/*.{h,m}"
 # 框架是否使用的ARC
 s.requires_arc = true
 # 核心库
-s.frameworks = "Foundation","libsqlite3"
+s.frameworks = "Foundation",
 #依赖库
 s.dependency "FMDB", "~> 2.6.2"
 

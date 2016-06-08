@@ -14,7 +14,6 @@
 		6401D2681D07CCEC007D105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6401D2661D07CCEC007D105A /* Main.storyboard */; };
 		6401D26A1D07CCEC007D105A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6401D2691D07CCEC007D105A /* Assets.xcassets */; };
 		6401D26D1D07CCEC007D105A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6401D26B1D07CCEC007D105A /* LaunchScreen.storyboard */; };
-		6401D27C1D07CD18007D105A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6401D27B1D07CD18007D105A /* libsqlite3.tbd */; };
 		6401D2801D07CDA7007D105A /* ChanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D27F1D07CDA7007D105A /* ChanModel.m */; };
 		64305AF91D07F9CF00DC6453 /* ChanFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64305AF61D07F9CF00DC6453 /* ChanFMDBHelper.m */; };
 		64305AFA1D07F9CF00DC6453 /* ChanFMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64305AF81D07F9CF00DC6453 /* ChanFMDBModel.m */; };
@@ -32,7 +31,6 @@
 		6401D2691D07CCEC007D105A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6401D26C1D07CCEC007D105A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6401D26E1D07CCEC007D105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6401D27B1D07CD18007D105A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6401D27E1D07CDA7007D105A /* ChanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanModel.h; sourceTree = "<group>"; };
 		6401D27F1D07CDA7007D105A /* ChanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanModel.m; sourceTree = "<group>"; };
 		64305AF51D07F9CF00DC6453 /* ChanFMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBHelper.h; sourceTree = "<group>"; };
@@ -48,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6401D27C1D07CD18007D105A /* libsqlite3.tbd in Frameworks */,
 				349F8E5DA67C0106044BD76A /* libPods-CT4FMDBDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +65,6 @@
 		6401D2511D07CCEC007D105A = {
 			isa = PBXGroup;
 			children = (
-				6401D27B1D07CD18007D105A /* libsqlite3.tbd */,
 				6401D25C1D07CCEC007D105A /* CT4FMDBDemo */,
 				6401D25B1D07CCEC007D105A /* Products */,
 				15BCC65EECED3CFFAB04D77F /* Pods */,
