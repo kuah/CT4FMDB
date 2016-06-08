@@ -15,8 +15,9 @@
 		6401D26A1D07CCEC007D105A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6401D2691D07CCEC007D105A /* Assets.xcassets */; };
 		6401D26D1D07CCEC007D105A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6401D26B1D07CCEC007D105A /* LaunchScreen.storyboard */; };
 		6401D2801D07CDA7007D105A /* ChanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6401D27F1D07CDA7007D105A /* ChanModel.m */; };
-		64305AF91D07F9CF00DC6453 /* ChanFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64305AF61D07F9CF00DC6453 /* ChanFMDBHelper.m */; };
-		64305AFA1D07F9CF00DC6453 /* ChanFMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64305AF81D07F9CF00DC6453 /* ChanFMDBModel.m */; };
+		64535E721D0814210085580F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64535E711D0814210085580F /* libsqlite3.tbd */; };
+		64535E781D081C780085580F /* ChanFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64535E751D081C780085580F /* ChanFMDBHelper.m */; };
+		64535E791D081C780085580F /* ChanFMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64535E771D081C780085580F /* ChanFMDBModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +34,11 @@
 		6401D26E1D07CCEC007D105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6401D27E1D07CDA7007D105A /* ChanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanModel.h; sourceTree = "<group>"; };
 		6401D27F1D07CDA7007D105A /* ChanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanModel.m; sourceTree = "<group>"; };
-		64305AF51D07F9CF00DC6453 /* ChanFMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBHelper.h; sourceTree = "<group>"; };
-		64305AF61D07F9CF00DC6453 /* ChanFMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBHelper.m; sourceTree = "<group>"; };
-		64305AF71D07F9CF00DC6453 /* ChanFMDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBModel.h; sourceTree = "<group>"; };
-		64305AF81D07F9CF00DC6453 /* ChanFMDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBModel.m; sourceTree = "<group>"; };
+		64535E711D0814210085580F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		64535E741D081C780085580F /* ChanFMDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBHelper.h; sourceTree = "<group>"; };
+		64535E751D081C780085580F /* ChanFMDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBHelper.m; sourceTree = "<group>"; };
+		64535E761D081C780085580F /* ChanFMDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanFMDBModel.h; sourceTree = "<group>"; };
+		64535E771D081C780085580F /* ChanFMDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanFMDBModel.m; sourceTree = "<group>"; };
 		7E092375E54076A99C48D289 /* libPods-CT4FMDBDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CT4FMDBDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92932B0FE22E98FA7D60169 /* Pods-CT4FMDBDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT4FMDBDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CT4FMDBDemo/Pods-CT4FMDBDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64535E721D0814210085580F /* libsqlite3.tbd in Frameworks */,
 				349F8E5DA67C0106044BD76A /* libPods-CT4FMDBDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,11 +86,11 @@
 		6401D25C1D07CCEC007D105A /* CT4FMDBDemo */ = {
 			isa = PBXGroup;
 			children = (
-				64305AF41D07F9CF00DC6453 /* CT4FMDB */,
 				6401D2601D07CCEC007D105A /* AppDelegate.h */,
 				6401D2611D07CCEC007D105A /* AppDelegate.m */,
 				6401D2631D07CCEC007D105A /* ViewController.h */,
 				6401D2641D07CCEC007D105A /* ViewController.m */,
+				64535E731D081C780085580F /* CT4FMDB */,
 				6401D27D1D07CD26007D105A /* Model */,
 				6401D2661D07CCEC007D105A /* Main.storyboard */,
 				6401D2691D07CCEC007D105A /* Assets.xcassets */,
@@ -115,20 +118,21 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		64305AF41D07F9CF00DC6453 /* CT4FMDB */ = {
+		64535E731D081C780085580F /* CT4FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				64305AF51D07F9CF00DC6453 /* ChanFMDBHelper.h */,
-				64305AF61D07F9CF00DC6453 /* ChanFMDBHelper.m */,
-				64305AF71D07F9CF00DC6453 /* ChanFMDBModel.h */,
-				64305AF81D07F9CF00DC6453 /* ChanFMDBModel.m */,
+				64535E741D081C780085580F /* ChanFMDBHelper.h */,
+				64535E751D081C780085580F /* ChanFMDBHelper.m */,
+				64535E761D081C780085580F /* ChanFMDBModel.h */,
+				64535E771D081C780085580F /* ChanFMDBModel.m */,
 			);
 			path = CT4FMDB;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		DDF5FAB241134EA7CFD7AAA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				64535E711D0814210085580F /* libsqlite3.tbd */,
 				7E092375E54076A99C48D289 /* libPods-CT4FMDBDemo.a */,
 			);
 			name = Frameworks;
@@ -256,10 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6401D2651D07CCEC007D105A /* ViewController.m in Sources */,
+				64535E781D081C780085580F /* ChanFMDBHelper.m in Sources */,
 				6401D2801D07CDA7007D105A /* ChanModel.m in Sources */,
 				6401D2621D07CCEC007D105A /* AppDelegate.m in Sources */,
-				64305AF91D07F9CF00DC6453 /* ChanFMDBHelper.m in Sources */,
-				64305AFA1D07F9CF00DC6453 /* ChanFMDBModel.m in Sources */,
+				64535E791D081C780085580F /* ChanFMDBModel.m in Sources */,
 				6401D25F1D07CCEC007D105A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CT4FMDBDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CT4FMDBDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CT4FMDBDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CT4FMDBDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
