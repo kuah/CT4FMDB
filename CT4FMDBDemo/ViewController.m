@@ -27,13 +27,13 @@
         [model saveOrUpdate];
     }
         //具体请看ChanModel类中方法
+        //分页
         NSArray *a = [ChanModel findByCriteria:@"WHERE sex=1" Page:1 PageSize:3];
        NSArray * arr =[ChanModel findAll];
         for (ChanModel *model in arr) {
             NSLog(@"%@",model.description);
         }
         NSLog(@"%ld",arr.count);
-        
     });
     
     
