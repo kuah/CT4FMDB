@@ -26,6 +26,7 @@
         model.sex = @(i%2 == 0);
         [model saveOrUpdate];
     }
+        //具体请看ChanModel类中方法
         NSArray *a = [ChanModel findByCriteria:@"WHERE sex=1" Page:1 PageSize:3];
        NSArray * arr =[ChanModel findAll];
         for (ChanModel *model in arr) {
