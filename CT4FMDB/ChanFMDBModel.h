@@ -38,6 +38,9 @@
 /**表的主键（必须******）*********/
 +(NSString *)primaryKey;
 
+///获取总条数
++(NSInteger)getCountByCriteria:(NSString *)criteria;;
+
 /** 保存或更新
  * 如果不存在主键，保存，
  * 有主键，则更新
@@ -71,23 +74,15 @@
 
 + (instancetype)findFirstWithFormat:(NSString *)format, ...;
 
-/** 根据某条件获取总条数 (nil 则获取全部) */
-+(NSInteger)getCountByCriteria:(NSString *)criteria;
-
-
-
 /** 查找某条数据 */
 + (instancetype)findFirstByCriteria:(NSString *)criteria;
 
 + (NSArray *)findWithFormat:(NSString *)format, ...;
 
 /** 通过条件查找数据
+ * 这样可以进行分页查询 @" WHERE pk > 5 limit 10"
  */
 + (NSArray *)findByCriteria:(NSString *)criteria;
-
-/**条件分页查询*/
-+ (NSArray *)findByCriteria:(NSString *)criteria Page:(NSInteger)page PageSize:(NSInteger)pagesize;
-
 /**
  * 创建表
  * 如果已经创建，返回YES
