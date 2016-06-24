@@ -219,7 +219,7 @@
 - (BOOL)saveOrUpdate
 {
     id primaryValue = [self valueForKey:[[self class] primaryKey]];
-    NSString *condition = [NSString stringWithFormat:@"WHERE %@ = %@",[[self class] primaryKey],primaryValue];
+    NSString *condition = [NSString stringWithFormat:@"WHERE %@ = '%@'",[[self class] primaryKey],primaryValue];
     if ([[self class] findFirstByCriteria:condition]) {
         return [self update];
     }
